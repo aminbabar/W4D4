@@ -21,5 +21,10 @@ describe "Array#two_sum" do
 
     it "returns an array containing all pairs of positions where elements sum to zero" do
         expect([-1, 0, 2, -2, 1].two_sum).to eq([[0, 4], [2, 3]])
+        expect([4,-2,7,2,-4].two_sum).to eq([[0, 4], [1, 3]])
+    end
+
+    it "returns sorted pairs dictionary wise" do
+        expect([4,-2,7,2,-4].two_sum).to_not eq([[1, 3], [0, 4]])
     end
 end
