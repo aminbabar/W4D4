@@ -41,3 +41,23 @@ def my_transpose(multi_arr)
     end
     transpose
 end
+
+
+def stock_picker(arr)
+    queue = []
+    (0...arr.length).each do |i|
+        (0...arr.length).each do |j|
+            debugger
+            if j > i
+                profit = [arr[j] - arr[i], i, j]
+                if !queue.empty?
+                    if queue.last[0] < profit[0]
+                        queue << profit
+                    end
+                end
+                debugger
+            end
+        end
+    end
+    return queue.last[1..-1]
+end

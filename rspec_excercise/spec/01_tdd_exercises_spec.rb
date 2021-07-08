@@ -55,3 +55,21 @@ describe "#my_transpose" do
     #     expect { my_transpose([1,2,3]) }.to raise_exception(TypeError)
     # end
 end
+
+
+
+describe "#stock_picker" do
+
+    it "should accept an array an an arg" do
+        expect { stock_picker([1.18, 2.25])}.to_not raise_error
+    end
+
+
+    it "should return the pair values with the greated positive difference" do
+        expect(stock_picker([1,2,3,4,5])).to eq([0, 4])
+    end
+
+
+
+
+end
