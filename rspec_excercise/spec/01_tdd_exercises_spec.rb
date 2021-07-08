@@ -28,3 +28,30 @@ describe "Array#two_sum" do
         expect([4,-2,7,2,-4].two_sum).to_not eq([[1, 3], [0, 4]])
     end
 end
+
+describe "#my_transpose" do
+
+    it "switches the rows and columns of a matrix" do
+        expect(my_transpose([
+
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8]
+
+        ]) ).to eq([
+        
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8]
+
+        ])
+    end
+
+    it "returns an empty array for empty input" do
+        expect(my_transpose([])).to eq([])
+    end
+
+    # it "raises an error for one dimensional array" do 
+    #     expect { my_transpose([1,2,3]) }.to raise_exception(TypeError)
+    # end
+end

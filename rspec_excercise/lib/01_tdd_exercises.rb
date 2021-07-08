@@ -29,3 +29,15 @@ class Array
     end
 
 end
+
+def my_transpose(multi_arr)
+    return [] if multi_arr.length == 0
+    transpose = Array.new(multi_arr.length) { [] } 
+
+    (0...multi_arr.length).each do |i|
+        (0...multi_arr.length).each do |j|
+            transpose[j] += [multi_arr[i][j]]
+        end
+    end
+    transpose
+end
