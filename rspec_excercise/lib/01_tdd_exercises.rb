@@ -6,9 +6,26 @@ def my_uniq(array)
     new_arr
 end
 
+
+require "byebug"
+
+
 class Array
 
     def two_sum
+        hash = {}
+        new_arr = []
+        self.each_with_index do |n, idx|
+            hash[n] = idx
+        end
+        
+        self.each_with_index do |ele, idx|
+            if hash.has_key?(-ele) && ele != 0
+                new_arr << [idx, hash[-ele]]
+                hash.delete(ele)
+            end
+        end
+        return new_arr
     end
 
 end

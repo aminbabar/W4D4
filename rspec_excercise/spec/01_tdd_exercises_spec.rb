@@ -20,6 +20,6 @@ end
 describe "Array#two_sum" do
 
     it "returns an array containing all pairs of positions where elements sum to zero" do
-        expect([-1, 0, 2])
+        expect([-1, 0, 2, -2, 1].two_sum).to eq([[0, 4], [2, 3]])
     end
 end
